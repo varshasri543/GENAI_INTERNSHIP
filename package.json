@@ -1,0 +1,17 @@
+{
+  "name": "apollo-hospital-app",
+  "version": "1.0.0",
+  "description": "Apollo Hospital AI Receptionist & Appointment App",
+  "scripts": {
+    "install:backend": "npm install --prefix backend",
+    "install:frontend": "npm install --prefix frontend",
+    "install-all": "npm run install:backend && npm run install:frontend",
+    "backend": "npm start --prefix backend",
+    "frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "start": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
